@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from 'react'
 
-import { getPokemons } from '../../helpers/getPokemons';
+import { PokemonList } from './PokemonList';
 
 export const HomeScreen = () => {
-    const [ pok, setPok ] = useState({});
-
-    useEffect(() => {
-        getPokemons()
-            .then( pokemons => setPok( pokemons ) )
-    }, [])
     
-    // console.log( pok );
-
     return (
         <div>
-            <h2> fsfdd</h2>
-            {/* <h2> { pok.name } </h2> 
-            <h2> { pok.id } </h2>  */}
+            <h2> HOME PAGE </h2>
             <hr></hr>
 
+            <PokemonList />
+            
         </div>
+
     )
 }

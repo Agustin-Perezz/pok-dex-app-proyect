@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom";
 
-import { HomeScreen } from "../components/HomeScreen";
-import { PokemonScreen } from "../components/PokemonScreen";
+import { HomeScreen } from "../components/pokemons/HomeScreen";
+import { PokemonScreen } from "../components/pokemons/PokemonScreen";
 import { NotFoundScreen } from "../components/NotFoundScreen";
 
 export const AppRoutes = () => {
