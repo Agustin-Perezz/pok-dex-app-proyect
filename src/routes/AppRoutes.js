@@ -13,11 +13,17 @@ export const AppRoutes = () => {
         <BrowserRouter>
             <Routes>
 
-                <Route exact path="/" element={ <HomeScreen /> } />
-                <Route path="/pokemon" element={ <PokemonScreen /> } />
+                <Route 
+                    exact path="/" 
+                    element={ <HomeScreen /> } 
+                />
+                <Route 
+                    exact path="/pokemon" 
+                    element={ <PokemonScreen /> } 
+                />
 
                 <Route path="*" element={ <NotFoundScreen /> } />
-
+                
             </Routes> 
         </BrowserRouter>
     )

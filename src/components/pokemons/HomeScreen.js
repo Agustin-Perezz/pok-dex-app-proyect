@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { getPokemons } from '../helpers/getPokemons';
+import { getPokemons } from '../../helpers/getPokemons';
 
 export const HomeScreen = () => {
     const [ pok, setPok ] = useState({});
