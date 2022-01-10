@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { PokemonList } from './PokemonList';
 
 export const HomeScreen = () => {
     
     return (
-        <div>
+        <div className='pokemon__home'>
             <h2> HOME PAGE </h2>
-            <hr></hr>
 
             <PokemonList />
-            
         </div>
-
     )
 }

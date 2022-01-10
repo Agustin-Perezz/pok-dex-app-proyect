@@ -3,7 +3,7 @@ import { AppRoutes } from './routes/AppRoutes'
 
 export const PokemonApp = () => {
     return (
-        <div>
+        <div className='principal'>
             <AppRoutes />
         </div>
     )
