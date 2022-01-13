@@ -4,9 +4,7 @@ import {
   Route
 } from "react-router-dom";
 
-import { HomeScreen } from "../components/pokemons/HomeScreen";
-import { PokemonSearchScreen } from "../components/pokemons/PokemonSearchScreen";
-import { NotFoundScreen } from "../components/NotFoundScreen";
+import { DashBoardRoutes } from "./DashBoardRoutes";
 
 export const AppRoutes = () => {
     return (
@@ -14,16 +12,9 @@ export const AppRoutes = () => {
             <Routes>
 
                 <Route 
-                    exact path="/pokemon" 
-                    element={ <PokemonSearchScreen /> } 
+                    path="/*" 
+                    element={ <DashBoardRoutes /> } 
                 />
-
-                <Route 
-                    exact path="/" 
-                    element={ <HomeScreen /> } 
-                />
-
-                <Route path="*" element={ <NotFoundScreen /> } />
                 
             </Routes> 
         </BrowserRouter>
