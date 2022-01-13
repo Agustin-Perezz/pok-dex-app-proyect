@@ -1,0 +1,57 @@
+
+
+.search__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__box {
+    // position: absolute;
+    width: 300px;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    left: 50%;
+}
+
+.search__input .search__btn {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.search__input {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+.search__btn {
+    height: 30px;
+    width: 50px;
+    position: relative;
+    background: skyblue;
+    padding-left: -5px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 10px;
+
+    &:hover {
+        background: darken($color: skyblue, $amount: 15);
+    }
+    
+}
+
+.icon {
+    vertical-align: middle;
+    padding-right: 5px;
+}

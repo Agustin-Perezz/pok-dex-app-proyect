@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { typeColor } from '../../assets/ColorPokemons'
-import {  GiHeartBeats, GiKnifeThrust  } from 'react-icons/gi';
+import { GiKnifeThrust  } from 'react-icons/gi';
 import { MdShield, MdSpeed } from "react-icons/md";
 
 export const PokemonCard = ({
@@ -19,12 +19,12 @@ export const PokemonCard = ({
     return (
           <div className='pokemon__card cursor' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
             <h2> HP { hp } </h2>
-            <img src={ img_pokemon } loading='lazy'></img>
+            <img src={ img_pokemon } loading='lazy' alt={ name }></img>
             <h1> { name } </h1>
-            <div className='pokemon__types' >
+            <div className='pokemon__types'>
               <span style={{ background: `${ colorPokemon }`}}> { types[0].type.name } </span>
               {
-                ( types[1] != undefined ) && <span style={{ background: `${ colorPokemon }`}}> { types[1].type.name } </span>
+                ( types[1] !== undefined ) && <span style={{ background: `${ colorPokemon }`}}> { types[1].type.name } </span>
               }
             </div>
             <div className='pokemon__stats'>

@@ -7,9 +7,8 @@ export const getPokemonsData = async( id = '1' ) => {
 
         const url = `${ baseUrlApi }${ id }`; 
         const resp = await fetch( url );
-        const data = await resp.json();
 
-        // console.log( data );
+        const data = await resp.json();
         return data;
         
     } catch (error) {

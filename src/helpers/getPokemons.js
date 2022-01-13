@@ -4,10 +4,9 @@ const allPokemons = [];
 
 export const getPokemons = async() => {
     
-    for (let x = 100; x < 110; x++) {
+    for (let x = 1; x < 100; x++) {
         
         const data = await getPokemonsData(`${ x }`);
-        console.log( data )
 
         const filterDataPokemon = {
             id: data.id,
