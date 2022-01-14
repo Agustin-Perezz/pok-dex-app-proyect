@@ -3,6 +3,7 @@ import React from 'react'
 import { typeColor } from '../../assets/ColorPokemons'
 import { GiKnifeThrust  } from 'react-icons/gi';
 import { MdShield, MdSpeed } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 
 export const PokemonCard = ({
   attack,
@@ -11,13 +12,13 @@ export const PokemonCard = ({
   hp,
   img_pokemon,
   name,
-  types
+  types,
 }) => {
 
     const colorPokemon = typeColor[ types[0].type.name ];
 
     return (
-          <div className='pokemon__card cursor' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
+          <div  className='pokemon__card cursor' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
             <h2> HP { hp } </h2>
             <img src={ img_pokemon } loading='lazy' alt={ name }></img>
             <h1> { name } </h1>
