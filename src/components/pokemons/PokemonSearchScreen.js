@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useState } from 'react'
 
 import { BiSearchAlt } from "react-icons/bi"; 
 import { getPokemonByName } from '../../helpers/getPokemonByName';
@@ -8,7 +8,7 @@ import { PokemonCard } from './PokemonCard';
 
 export const PokemonSearchScreen = () => {
 
-    const [ test, setTest ] = useState([]);
+    const [ pokemonSelected, setPokemonSelected ] = useState([]);
     
     const [ formValues, handleInputChange ] = useForm({
 		searchTxt: ''	
@@ -19,10 +19,9 @@ export const PokemonSearchScreen = () => {
     const handleSubmit = ( e ) => {
         e.preventDefault();
         getPokemonByName( searchTxt )
-            .then( ( pok ) => setTest( pok ) )
+            .then( ( pokemon ) => setPokemonSelected( pokemon ) )
     }
 
-    
     return (
         <div>
 
@@ -48,7 +47,7 @@ export const PokemonSearchScreen = () => {
                 </form>
             </div>
             {   
-                ( test === undefined )
+                ( pokemonSelected === undefined )
                 &&
                 (
                     <NotFoundScreen /> 
@@ -56,11 +55,11 @@ export const PokemonSearchScreen = () => {
             }
 
             {
-                ( test !== undefined && test.length !== 0 )
+                ( pokemonSelected !== undefined && pokemonSelected.length !== 0 )
                 &&
                 (
                     <div className='search__container'>
-                        <PokemonCard { ...test } />
+                        <PokemonCard { ...pokemonSelected } />
                     </div>
                 )
             }

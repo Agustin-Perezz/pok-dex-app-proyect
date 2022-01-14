@@ -17,7 +17,10 @@ export const PokemonCard = ({
 
     const colorPokemon = typeColor[ types[0].type.name ];
 
+    const urlPokemon = `/pokemons/${ name }`;
+
     return (
+      <NavLink to={ urlPokemon } >
           <div  className='pokemon__card cursor' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
             <h2> HP { hp } </h2>
             <img src={ img_pokemon } loading='lazy' alt={ name }></img>
@@ -34,5 +37,6 @@ export const PokemonCard = ({
               <h3> <MdSpeed className='custom_1'/> <br /> { speed } </h3>
             </div>
           </div>
+    </NavLink>
     )
 }

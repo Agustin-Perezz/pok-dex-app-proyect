@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 
-import { getPokemons } from '../../helpers/getPokemons';
+import { PokemonContext } from '../../contexts/PokemonContext';
 import { PokemonCard } from './PokemonCard';
 
 export const PokemonList = () => {
 
-    const [ pokemons, setPokemons ] = useState([]);
-
-    useEffect(() => {
-        getPokemons()
-            .then( pokemons => setPokemons( pokemons ) )
-    }, [])
+    const pokemons = useContext( PokemonContext );
 
     return (
         <div className='container'>
