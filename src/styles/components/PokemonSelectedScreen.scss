@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Lora:ital@1&family=Montserrat:wght@200&family=Nunito:wght@300&family=Poppins:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Lora:ital@1&family=Montserrat:wght@200&family=Mulish:wght@300&family=Nunito:wght@300&family=Poppins:wght@200&family=Titillium+Web:wght@300&family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Caveat:wght@600&family=Lora:ital@1&family=Montserrat:wght@200&family=Mulish:wght@300&family=Nunito:wght@300&family=Poppins:wght@200&family=Titillium+Web:wght@300&family=Varela+Round&display=swap');
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    background: url('https://png.pngtree.com/thumb_back/fw800/background/20190916/pngtree-abstract-white-background-with-gray-triangles-image_315704.jpg');
+}
+.main__img {
+    width: 100%;
+    height: 300px;
+}
+
+.main__block-1 {
+    padding-top: 3rem;
+}
+
+.main__text {
+    display: flex;
+    justify-content: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    width: 300px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    h1 {
+        padding: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    
+}
+
+.main__habitat {
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 20px; 
+    padding-bottom: -10px;
+    text-align: center;
+}
+
+h4 {
+    margin-top: -10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+
+.main__props { 
+    display: flex;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-top: -10px;
+    
+    h3 {
+        margin-left: 10px;
+        font-size: 15px;
+        border-radius: 60px;
+        color: white;
+        padding: 8px 8px;
+    }
+
+}
+
+.main__button { 
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 40px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    background: #1c64e9;
+    letter-spacing: 2px;
+
+    &:hover {
+      background: darken($color: #1c64e9, $amount: 10);
+    }
+
+    svg { 
+      vertical-align: middle;
+      font-size: 20px;
+    }
+    
+}
+
+.main__stats {
+  background: #E5E8E8;
+  width: 100%;
+  height: 300px;
+  margin: 20px 10px;
+  border-radius: 5px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border: 1px solid rgb(187, 179, 179);
+
+  ul {
+    padding: 0;
+  }
+
+  h5 {
+    margin: 0; 
+    padding-top: 15px;
+    font-size: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+}
+
+.chart{
+  display:table;
+  table-layout: fixed;   
+  
+  width: 100%;
+  max-width:700px;
+  height:200px;
+  margin: 0 auto;
+  
+  background-image:linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+  background-size: 100% 50px;
+  background-position: left top;
+  
+  li{
+    position:relative;
+    display:table-cell;
+    vertical-align:bottom;
+    height: 200px;
+  }
+  
+  span{
+    margin:0 1em;
+    text-align: center;
+    width: 50px;
+    display: block;
+    font-size: 10px;
+    max-height: 100%;
+
+    &:before{
+      position:absolute;
+      left:0;right:0;top:100%;
+      padding:5px 1em 0;
+      display:block;
+      text-align:center;
+      content:attr(title);
+      word-wrap: break-word;
+    }
+    
+  }
+  
+}
+
+@keyframes draw{
+  0%{height:0;} 
+}

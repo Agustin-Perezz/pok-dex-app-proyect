@@ -12,7 +12,8 @@
     justify-content: center;
 }
 
-.pokemon__card {
+.pokemon {
+
     width: 350px;
     height: 480px;
     max-width: 350px;
@@ -23,10 +24,13 @@
     text-align: center;
     justify-content: center;
     transition: all 0.25s;
-    
+    cursor: pointer;
+
     img {
-        max-width: 180px;
-        max-height: 170px;
+        height: 180px;
+        width: 170px;
+        // max-width: 180px;
+        // max-height: 170px;
         padding-top: 10px;
     }
 
@@ -51,55 +55,55 @@
         border-radius: 30px;
         margin-left: auto;
     }
+
+    &__types {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0 10px 0;
+        font-size: 20px;
+        font-family: 'Be Vietnam Pro', sans-serif;
     
-}
-
-.pokemon__types {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0 10px 0;
-    font-size: 20px;
-    font-family: 'Be Vietnam Pro', sans-serif;
-
-    span {
-        padding: 5px 20px;
-        border-radius: 20px;
-        color: white;
+        span {
+            padding: 5px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+        
     }
     
-}
+    &__stats {
+        display: flex;
+        margin-top: 0.5rem;
+        height: 100%;
+        max-height: 250px;
+        justify-content: space-around;
 
-.pokemon__stats {
-    display: flex;
-    margin-top: 0.5rem;
-    height: 100%;
-    max-height: 250px;
-    justify-content: space-around;
+        h3 {
+            font-size: 18px;
+            line-height: 28px;
+            margin: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    h3 {
-        font-size: 18px;
-        line-height: 28px;
-        margin: 20px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-    }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    h1 {
-        font-family: 'Montserrat', sans-serif;
-    }
+        .custom_1 {
+            color: blue;
+            font-size: 25px;
+        }    
 
-    .custom_1 {
-        color: blue;
-        font-size: 25px;
+        .custom_2 {
+            color: red;
+            font-size: 25px;
+        }    
+
+        .custom_3 {
+            color: green;
+            font-size: 25px;
+        }
     }    
 
-    .custom_2 {
-        color: red;
-        font-size: 25px;
-    }    
-
-    .custom_3 {
-        color: green;
-        font-size: 25px;
-    }    
 }

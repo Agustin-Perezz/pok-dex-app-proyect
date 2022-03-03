@@ -16,4 +16,5 @@ export const typeColor = {
   psychic: "#a29bfe",
   rock: "#2d3436",
   water: "#0190FF",
+  steel: "#34495E",
 };

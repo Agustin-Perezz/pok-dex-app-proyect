@@ -21,9 +21,9 @@ export const PokemonCard = ({
 
     return (
       <NavLink to={ urlPokemon } >
-          <div  className='pokemon__card cursor' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
+          <div className='pokemon' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
             <h2> HP { hp } </h2>
-            <img src={ img_pokemon } loading='lazy' alt={ name }></img>
+            <img src={ img_pokemon } loading="lazy" alt={ name }></img>
             <h1> { name } </h1>
             <div className='pokemon__types'>
               <span style={{ background: `${ colorPokemon }`}}> { types[0].type.name } </span>

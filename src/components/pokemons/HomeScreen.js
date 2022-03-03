@@ -1,7 +1,5 @@
 import React from 'react'
-
-import { PokemonList } from './PokemonList';
-import { PokemonSearchScreen } from './PokemonSearchScreen';
+import { PokemonList, PokemonSearchScreen } from '.'
 
 export const HomeScreen = () => {
     

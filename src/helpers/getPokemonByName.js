@@ -1,10 +1,10 @@
-import { getPokemonsData } from "./getPokemonsData";
+import { getPokemonData } from ".";
 
 export const getPokemonByName = async( namePok = 'bulbasaur' ) => {
 
     try {
 
-        const data = await getPokemonsData( namePok );
+        const data = await getPokemonData( namePok );
         
         if ( data !== undefined ) {
             return {

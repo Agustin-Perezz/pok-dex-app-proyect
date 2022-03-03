@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 
 import { BiSearchAlt } from "react-icons/bi"; 
-import { getPokemonByName } from '../../helpers/getPokemonByName';
+import { NotFoundScreen, PokemonCard } from '.';
+import { getPokemonByName } from '../../helpers';
 import { useForm } from '../../hooks/useForm';
-import { NotFoundScreen } from '../NotFoundScreen';
-import { PokemonCard } from './PokemonCard';
 
 export const PokemonSearchScreen = () => {
 
@@ -19,13 +18,13 @@ export const PokemonSearchScreen = () => {
     const handleSubmit = ( e ) => {
         e.preventDefault();
         getPokemonByName( searchTxt )
-            .then( ( pokemon ) => setPokemonSelected( pokemon ) )
+            .then( ( pokemon ) => setPokemonSelected( pokemon ))
     }
 
     return (
         <div>
 
-            <div className='search__box'>
+            <div className='search'>
                 <form onSubmit={ handleSubmit } >
                     <input 
                         className='search__input'
@@ -42,7 +41,7 @@ export const PokemonSearchScreen = () => {
                         type='submit' 
                         placeholder='search pokemon...'
                     > 
-                    <BiSearchAlt className='icon'/> 
+                    <BiSearchAlt className='search__icon'/> 
                     </button>
                 </form>
             </div>

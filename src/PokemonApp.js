@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react'
-
-import { PokemonContext } from './contexts/PokemonContext'
-import { getPokemons } from './helpers/getPokemons';
-
+import { HomeScreen } from './components/pokemons'
+import { PokemonProvider } from './contexts'
 import { AppRoutes } from './routes/AppRoutes'
 
 export const PokemonApp = () => {
 
-    const [ data, setData ] = useState([]);
-
-    useEffect(() => {
-        getPokemons()
-            .then( dataPokemons => setData( dataPokemons ) )
-    }, [])
-
-    return (
+   return (
         <div>
-            <PokemonContext.Provider value={ data } >
+            <PokemonProvider>
                 <AppRoutes />
-            </PokemonContext.Provider>
+            </PokemonProvider>
         </div>
     )
 }
