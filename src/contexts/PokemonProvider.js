@@ -3,10 +3,10 @@ import { getPokemonData } from "../helpers";
 
 export const PokemonProvider = ({ children }) => {
 
-  const allPokemons = [];
   const getPokemons = async( start, end ) => {
+    const allPokemons = [];
 
-    for (let x = start; x < end; x++) {
+    for (let x = start; x <= end; x++) {
         
       const data = await getPokemonData(`${ x }`);
 
