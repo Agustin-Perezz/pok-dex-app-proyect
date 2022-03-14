@@ -1,59 +1,81 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 .search {
 
-    width: 300px;
-    margin: 30px auto;
-    left: 50%;
-    
-    &__input &__btn {
-        position: relative;
-        display: inline-block;
-        font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  background-color: none;
+  
+
+  input button {
+      position: relative;
+      display: inline-block;
+  }
+
+  .search__input {
+    height: 40px;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    font-family: 'Comfortaa', cursive;
+  }
+
+  .form {
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.38);
+    -moz-box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.38);
+  }
+
+  .search__btn {
+    position: relative;
+    border-radius: 0px 25px 25px 0px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #4285F4;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #346fce;
     }
-    
-    &__input {
-        font-family: 'Be Vietnam Pro', sans-serif;
-        width: 200px;
-        height: 30px;
-        border: none;
-        outline: none;
-        padding: 0 25px;
-        border-radius: 25px 0 0 25px;
-    }
-    
-    &__btn {
-        height: 30px;
-        width: 50px;
-        position: relative;
-        background: skyblue;
-        padding-left: -5px;
-        border-radius: 0 25px 25px 0;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding-left: 10px;
-        
-        &:hover {
-            background: darken($color: skyblue, $amount: 15);
-        }
-    }
-    
-    &__icon {
-        vertical-align: middle;
-        padding-right: 5px;
-        font-size: 15px;
-    }
+
+  }
 
 }
 
 .search__container {
     display: flex;
-    position: relative;
-    align-items: center;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3rem; 
 }
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, .1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #4285F4;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 

@@ -1,4 +1,3 @@
-import { HomeScreen } from './components/pokemons'
 import { PokemonProvider } from './contexts'
 import { AppRoutes } from './routes/AppRoutes'
 

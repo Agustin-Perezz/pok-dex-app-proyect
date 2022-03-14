@@ -1,4 +1,4 @@
 
-export { getPokemonByName } from "./getPokemonByName";
+export { getPokemonsSearched } from "./getPokemonsSearched";
 export { getPokemonData } from "./getPokemonData";
 export { getPokemonSelected } from "./getPokemonSelected";

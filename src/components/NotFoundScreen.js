@@ -3,7 +3,7 @@ import React from 'react'
 export const NotFoundScreen = () => {
     return (
         <div>
-           <h2> NOT found </h2> 
+            <h1>pete</h1>
         </div>
     )
 }

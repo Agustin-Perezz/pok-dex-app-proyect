@@ -1,7 +1,7 @@
 
 const baseUrlApi = 'https://pokeapi.co/api/v2/pokemon/';
 
-export const getPokemonData = async( id = '1' ) => {
+export const getPokemonData = async( id = '' ) => {
 
     try {
 
@@ -11,8 +11,9 @@ export const getPokemonData = async( id = '1' ) => {
 
         return data;
         
-    } catch (error) {
-        console.log( error );       
+    } catch( error ) {
+        console.log( error );
+        return undefined;
     }
 
 }

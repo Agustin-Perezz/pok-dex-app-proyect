@@ -1,68 +1,41 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 
-import { BiSearchAlt } from "react-icons/bi"; 
-import { NotFoundScreen, PokemonCard } from '.';
-import { getPokemonByName } from '../../helpers';
-import { useForm } from '../../hooks/useForm';
+export const PokemonSearchScreen = ({ setPokemonsSearched }) => {
 
-export const PokemonSearchScreen = () => {
-
-    const [ pokemonSelected, setPokemonSelected ] = useState([]);
+    const [inputValue, setInputValue] = useState('');
     
-    const [ formValues, handleInputChange ] = useForm({
-		searchTxt: ''	
-	}); 
-
-    const { searchTxt } = formValues;
-
     const handleSubmit = ( e ) => {
         e.preventDefault();
-        getPokemonByName( searchTxt )
-            .then( ( pokemon ) => setPokemonSelected( pokemon ))
+        setPokemonsSearched( inputValue );
+        setInputValue('');
+    }
+
+    const handleInputChange = ( e ) => {
+        setInputValue( e.target.value );
     }
 
     return (
-        <div>
-
+        <>
             <div className='search'>
-                <form onSubmit={ handleSubmit } >
+                <form onSubmit={ handleSubmit } className="form">
                     <input 
                         className='search__input'
-                        value={ searchTxt }
+                        value={ inputValue }
                         name='searchTxt'
                         onChange={ handleInputChange }
                         type='text'
                         autoComplete='off'
-                        placeholder='search pokemon...'
+                        placeholder='buscar pokemon...'
                     >
                     </input>
                     <button 
-                        className='search__btn' 
-                        type='submit' 
-                        placeholder='search pokemon...'
-                    > 
-                    <BiSearchAlt className='search__icon'/> 
+                        className='search__btn'
+                        type='submit'
+                    >
+                       Buscar 
                     </button>
                 </form>
             </div>
-            {   
-                ( pokemonSelected === undefined )
-                &&
-                (
-                    <NotFoundScreen /> 
-                )
-            }
-
-            {
-                ( pokemonSelected !== undefined && pokemonSelected.length !== 0 )
-                &&
-                (
-                    <div className='search__container'>
-                        <PokemonCard { ...pokemonSelected } />
-                    </div>
-                )
-            }
-
-        </div>
-    )
-}
+            
+        </>        
+)}

@@ -2,9 +2,9 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
+
+import { HomeScreen, PokemonSelectedScreen } from "../components/pokemons";
   
-import { HomeScreen } from "../components/pokemons/HomeScreen";
-import { PokemonSelectedScreen } from "../components/pokemons/PokemonSelectedScreen";
   
   export const DashBoardRoutes = () => {
       return (
