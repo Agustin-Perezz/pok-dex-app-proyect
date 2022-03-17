@@ -16,8 +16,10 @@ export const getPokemonSelected = async( pokemon ) => {
 
     let color = dataEspecies.color.name;
     ( color === 'yellow' ) ? color = '#D4AC0D' : color = dataEspecies.color.name;
-
+    if ( color === 'white' ) color = '#6d695b';
+    
     return {
+        img_pokemon: data.sprites.other['official-artwork'].front_default,
         id: data.id,
         name: data.name,
         weight,
@@ -31,7 +33,6 @@ export const getPokemonSelected = async( pokemon ) => {
         specialAttack: data.stats[3].base_stat,
         specialDefense: data.stats[4].base_stat,
         speed: data.stats[5].base_stat,
-        img_pokemon: data.sprites.other['official-artwork'].front_default,
     }
 
 }

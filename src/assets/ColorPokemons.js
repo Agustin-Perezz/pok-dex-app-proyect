@@ -1,6 +1,6 @@
 export const typeColor = {
   bug: "#26de81",
-  dragon: "#ffeaa7",
+  dragon: "#dac78b",
   dark: "#000000",
   electric: "#fed330",
   fairy: "#FF0069",

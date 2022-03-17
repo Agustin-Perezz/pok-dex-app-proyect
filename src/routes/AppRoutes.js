@@ -4,17 +4,15 @@ import {
   Route
 } from "react-router-dom";
 
-import { DashBoardRoutes } from "./DashBoardRoutes";
+import { HomeScreen, PokemonSelectedScreen } from "../components/pokemons";
 
 export const AppRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
 
-                <Route 
-                    path="/*" 
-                    element={ <DashBoardRoutes /> } 
-                />
+                <Route path="/" element={ <HomeScreen /> } />
+                <Route path="pokemons/:pokSelect" element={ <PokemonSelectedScreen /> } />
                 
             </Routes> 
         </BrowserRouter>

@@ -1,5 +1,4 @@
 
-export { NotFoundScreen } from "../NotFoundScreen";
 export { HomeScreen } from "./HomeScreen";
 export { PokemonCard } from "./PokemonCard";
 export { PokemonList } from "./PokemonList";

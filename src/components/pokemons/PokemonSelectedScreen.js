@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
 import { MdKeyboardReturn } from "react-icons/md";
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { getPokemonSelected } from '../../helpers';
-import { useNavigate } from "react-router-dom";
 
+import { GiLifeBar, GiShiningSword, GiShield, GiSpearHook, GiRunningNinja } from "react-icons/gi";
+  
 export const PokemonSelectedScreen = () => {
 
     const navigate = useNavigate();
-
+   
     const { pokSelect } = useParams();
 
     const [ data, setData ] = useState([]);
@@ -18,9 +19,9 @@ export const PokemonSelectedScreen = () => {
     }, [])
 
     const handleReturn = () => {
-        navigate('/');
+        navigate(-1);
     }
-    
+
     const { 
         habitat, 
         img_pokemon, 
@@ -37,11 +38,11 @@ export const PokemonSelectedScreen = () => {
         speed
     } = data;
 
-    
     return (
-        <div className='main'>
+        <div className='main animate__animated animate__zoomIn'>
+            <div className='container__pok'>
             <div className='main__block-1'>
-                    <img src={ img_pokemon } alt={ name } className='main__img'></img>
+                    <img src={ img_pokemon } alt={ name } className='main__img animate__animated animate__fadeInDown'></img>
                     <div className='main__text'>
                         <h1 className='main__name'> { name } </h1>
                         <h1> #: { id } </h1>
@@ -57,25 +58,29 @@ export const PokemonSelectedScreen = () => {
                 </div>
             </div>
             <div className='main__stats'>
-                <h1> STATS POKEMON </h1>
-                <ul className="chart">
-                        <li>
-                            <span style={{ height: `${ hp }%`, backgroundColor: '#52BE80'}} title="HP"> <h5> { hp } </h5> </span>
-                        </li>
-                        <li>
-                            <span style={{ height: `${ attack }%`, backgroundColor: '#D33030' }} title="ATTACK"> <h5> { attack } </h5> </span>
-                        </li>
-                        <li>
-                            <span style={{ height: `${ defense }%`, backgroundColor: '#5D6D7E' }} title="DEFENSE"> <h5> { defense } </h5> </span>
-                        </li>
-                        <li>
-                            <span style={{ height: `${ speed }%`, backgroundColor: '#3498DB' }} title="SPEED"> <h5> { speed } </h5> </span>
-                        </li>
-                        <li>
-                            <span style={{ height: `${ specialAttack }%`, backgroundColor: '#E74C3C' }} title="SPECIAL ATTACK"> <h5> { specialAttack } </h5> </span>
-                        </li>
-                      
-                    </ul>    
+                <h3> STATS </h3>
+                <div className='container__stat'>
+                <div className='main__stat'>
+                    <GiLifeBar style={{ backgroundColor: '#67c172' }}/>
+                    <h5> HP: { hp } </h5>
+                </div>
+                <div className='main__stat'>
+                    <GiShiningSword style={{ backgroundColor: '#d34b4b' }}/>
+                    <h5> Attack: { attack } </h5>
+                </div>
+                <div className='main__stat'>
+                    <GiShield style={{ backgroundColor: '#2c669d' }}/>
+                    <h5> Defense: { defense } </h5>
+                </div>
+                <div className='main__stat'>
+                    <GiSpearHook style={{ backgroundColor: '#b8b75a' }}/>
+                    <h5> Special.A: { specialAttack } </h5>
+                </div>
+                <div className='main__stat'>
+                    <GiRunningNinja style={{ backgroundColor: '#6bacc3' }}/>
+                    <h5> Speed: { speed } </h5>
+                </div>
+                </div>
             </div>
 
             <button 
@@ -84,7 +89,7 @@ export const PokemonSelectedScreen = () => {
                 onClick={ handleReturn }
             >
             <MdKeyboardReturn /> RETURN </button>
+            </div>
         </div>
     )
-
 }

@@ -1,22 +1,22 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PokemonCard } from '.';
-import { PokemonContext } from '../../contexts/';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { getGroupPokemons } from '../../helpers';
 
 export const PokemonList = () => {
 
     const [pokemons, setPokemons] = useState([]);
 
-    const { getPokemons } = useContext( PokemonContext )
-
     useEffect(() => {
-        getPokemons( pokemons.length+1, pokemons.length+20 )
+
+        getGroupPokemons( pokemons.length+1, pokemons.length+20 )
             .then( dataPokemons => setPokemons( dataPokemons ))
+
     }, [])
 
     const fetchMoreData = async () => {
-        const moreDataPokemons = await getPokemons( pokemons.length+1, pokemons.length+20 );
+        const moreDataPokemons = await getGroupPokemons( pokemons.length+1, pokemons.length+20 );
         setPokemons([ ...pokemons, ...moreDataPokemons ]);
     }
 
