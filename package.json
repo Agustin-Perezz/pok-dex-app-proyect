@@ -2,7 +2,7 @@
   "name": "pokedex-app-proyect",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Agustin-Perezz.github.io/pokedex-app-proyect",
+  "homepage": "https://agustin-perezz.github.io/pokedex-app-proyect",
   "main": "index.js",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
