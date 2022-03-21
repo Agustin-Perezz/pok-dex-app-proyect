@@ -6,13 +6,14 @@ import {
 
 import { HomeScreen, PokemonSelectedScreen } from "../components/pokemons";
 
-export const AppRoutes = () => {
+export const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
 
                 <Route path="/" element={ <HomeScreen /> } />
                 <Route path="pokemons/:pokSelect" element={ <PokemonSelectedScreen /> } />
+                <Route path="*" element={ <HomeScreen /> } />
                 
             </Routes> 
         </BrowserRouter>

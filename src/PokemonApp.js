@@ -1,10 +1,10 @@
-import { AppRoutes } from './routes/AppRoutes'
+import { AppRouter } from './routes/AppRouter'
 
 export const PokemonApp = () => {
 
    return (
         <div>
-            <AppRoutes />
+            <AppRouter />
         </div>
     )
 }
