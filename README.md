@@ -1,4 +1,4 @@
-# URL PAGINA: https://github.com/Agustin-Perezz/pokedex-app-proyect
+# URL PAGINA: hhttps://agustin-perezz.github.io/pokedex-app-proyect/
  
 Pokédex desarrollada desde cero por mi, me llevó un poco de tiempo ya que es la primera APP que hago por mi cuenta después de estar tomando cursos de React, SASS, JS, CSS. etc.
  
