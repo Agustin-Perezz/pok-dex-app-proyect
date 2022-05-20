@@ -1,4 +1,4 @@
-# URL PAGINA: proximamente
+# URL PAGINA: https://pokedexapp-01.netlify.app/
  
 Pokédex desarrollada desde cero por mi, me llevó un poco de tiempo ya que es la primera APP que hago por mi cuenta después de estar tomando cursos de React, SASS, JS, CSS. etc.
  
