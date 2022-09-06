@@ -8,18 +8,18 @@ import { PokemonCard } from "./PokemonCard";
 export const PokemonSearchScreen = () => {
 
     const [inputValue, setInputValue] = useState('');
-    const [pokemons, setPokemons] = useState([]);
+    const [pokemons, setPokemons] = useState({ data : undefined, loading : false });
 
     const location = useLocation();
-
     const navigate = useNavigate();
     
     const handleSubmit = async( e ) => {
         e.preventDefault();
         const { q = ''} = queryString.parse( location.search.trim().toLocaleLowerCase() );
         if ( q.length !== 0 ) {
+            setPokemons({ data: undefined, loading: true });
             const data = await getPokemonsSearched( q );
-            setPokemons([ data ]);
+            setPokemons({ data, loading: false });
         }
         navigate('');
     }
@@ -28,7 +28,6 @@ export const PokemonSearchScreen = () => {
         setInputValue( e.target.value );
         navigate(`?q=${ e.target.value }`)
     }
-
 
     return (
         <>
@@ -55,15 +54,18 @@ export const PokemonSearchScreen = () => {
 
             <div className='search__container'>
                 { 
-                    pokemons[0] === undefined && pokemons.length !== 0
+                    pokemons.loading && <span className="search__loading"> Loading... </span>
+                }
+                { 
+                    pokemons.data === undefined && inputValue !== 0
                     && 
                     <CustomError pokemonChange={ pokemons } /> 
                 }
                 {
-                    pokemons[0] !== undefined
+                    pokemons.data !== undefined && pokemons.loading !== true  
                     &&
                     <div className="animate__animated animate__fadeIn ">
-                        <PokemonCard { ...pokemons[0] } /> 
+                        <PokemonCard { ...pokemons.data } /> 
                     </div>
                 }
             </div>

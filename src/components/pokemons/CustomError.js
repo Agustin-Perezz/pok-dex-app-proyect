@@ -18,7 +18,6 @@ export const CustomError = ({ pokemonChange }) => {
     };
   }, [ pokemonChange ])
   
-
   return (
     <>
         {

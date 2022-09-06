@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { typeColor } from '../../assets/ColorPokemons'
 import { GiKnifeThrust  } from 'react-icons/gi';
 import { MdShield, MdSpeed } from "react-icons/md";
@@ -16,12 +14,13 @@ export const PokemonCard = ({
 }) => {
 
     const colorPokemon = typeColor[ types[0].type.name ];
-
     const urlPokemon = `/pokemons/${ name }`;
 
     return (
       <NavLink to={ urlPokemon } >
-          <div className='pokemon animate__animated animate__fadeIn' style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}>
+          <div className='pokemon animate__animated animate__fadeIn' 
+            style={{ background: `radial-gradient(circle at 50% -5%, ${ colorPokemon } 40%, #ffffff 36%)`}}
+          >
             <h2> HP { hp } </h2>
             <img src={ img_pokemon } loading="lazy" alt={ name }></img>
             <h1> { name } </h1>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 import { MdKeyboardReturn } from "react-icons/md";
 import { useParams, useNavigate } from 'react-router-dom'
 import { getPokemonSelected } from '../../helpers';
@@ -9,7 +8,6 @@ import { GiLifeBar, GiShiningSword, GiShield, GiSpearHook, GiRunningNinja } from
 export const PokemonSelectedScreen = () => {
 
     const navigate = useNavigate();
-   
     const { pokSelect } = useParams();
 
     const [ data, setData ] = useState([]);
