@@ -57,7 +57,7 @@ export const PokemonSearchScreen = () => {
                     pokemons.loading && <span className="search__loading"> Loading... </span>
                 }
                 { 
-                    pokemons.data === undefined && inputValue !== 0
+                    pokemons.data === undefined && inputValue.length !== 0
                     && 
                     <CustomError pokemonChange={ pokemons } /> 
                 }
