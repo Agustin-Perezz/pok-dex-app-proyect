@@ -1,12 +1,19 @@
-# URL PAGINA: https://pokedexapp-01.netlify.app/
- 
-Pokédex desarrollada desde cero por mi, me llevó un poco de tiempo ya que es la primera APP que hago por mi cuenta después de estar tomando cursos de React, SASS, JS, CSS. etc.
- 
-A la aplicación se le pueden agregar varias cosas más pero estoy conforme con el resultado y prefiero seguir con otras apps.
+
+## Pokedex App
+
+*Esta aplicación fue inicializada con* [Creat React App](https://create-react-app.dev/)
+
+La app tiene como finalidad permitirle al usuario ver todos los pokemons, buscar individualmente uno de ellos y visualizar una vista aparte del mismo.
 
 
+Link Deploy: https://agustin-perezz.github.io/pokedex-app-proyect/
 
-## Author
+## Construido con
 
-- [@Agustin_Perez](https://github.com/Agustin-Perezz)
+* [React](https://es.reactjs.org/)
+* [React Router DOM](https://reactrouter.com/) 
+* [Sass](https://sass-lang.com/)
 
+## Autor
+
+Agustin Nicolas Perez - [Linkedin](https://www.linkedin.com/in/agustinperez-front-end-developer/).
